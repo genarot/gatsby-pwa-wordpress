@@ -11,6 +11,7 @@ const Index = (props) => {
           title={post.frontmatter.title}
           image={post.frontmatter.image}
           excerpt={post.excerpt}
+          readMore={post.fields.slug}
         />
       ))}
     </PrimaryLayout>
@@ -28,6 +29,9 @@ query markDown {
       }
       excerpt
       html
+      fields {
+          slug
+      }
     }
   }
 }
