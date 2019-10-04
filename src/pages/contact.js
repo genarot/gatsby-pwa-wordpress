@@ -4,7 +4,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout"
 
 const Contact = () => {
   return (
-    <PrimaryLayout column={"col-10"}>
+    <PrimaryLayout column={"col-10"} activeMenu={'/contact'}>
       <div className="pt-5">
         <h1>Contacts</h1>
         <Form>

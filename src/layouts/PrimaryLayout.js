@@ -7,7 +7,7 @@ const PrimaryLayout = (props) => {
   return (
     <div>
       <SEO/>
-      <Header activeKey={props.activeMenu || window.location.pathname}/>
+      <Header activeKey={props.activeMenu}/>
       <div className="container">
         <div className="row justify-content-md-center">
           <div className={props.column || "col-xs-6"}>

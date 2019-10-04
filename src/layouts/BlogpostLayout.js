@@ -10,7 +10,7 @@ const BlogpostLayout = (props) => {
   return (
     <div>
       <SEO title={postInfo.title} image={postInfo.featured_media.source_url} description={postInfo.excerpt} keywords={postInfo.categories.map(cat => cat.name).join(',')}/>
-      <Header activeKey={props.activeMenu || window.location.pathname}/>
+      <Header activeKey={props.activeMenu}/>
       <div className="container">
         <div className="row justify-content-md-center">
           <h1 dangerouslySetInnerHTML={{__html: postInfo.title}} ></h1>

@@ -5,7 +5,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout"
 
 const Index = (props) => {
   return (
-    <PrimaryLayout>
+    <PrimaryLayout activeMenu={'/'}>
       {props.data.allWordpressPost.nodes.map((post, idx) => (
         <Post
           key={idx}

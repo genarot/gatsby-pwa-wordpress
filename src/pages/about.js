@@ -3,7 +3,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout"
 
 const About = () => {
   return (
-    <PrimaryLayout>
+    <PrimaryLayout activeMenu={'/about'}>
       <h1>About us</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, consequatur dolor dolorem eius eum
