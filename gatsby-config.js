@@ -7,7 +7,11 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Gatsby-Bootstrap"
+    title: "Gatsby-Bootstrap",
+    description: "This is the description or our website",
+    keywords: "gatsby, gatsby, project, bootstrap",
+    image: "/static/gatsby.jpg",
+    url: "http://www.atomicdevs.tech"
   },
   plugins: [
     {
@@ -29,5 +33,14 @@ module.exports = {
         hostingWPCOM: false
       },
     },
+    `gatsby-plugin-react-helmet`
   ],
 }
+/**
+ <Helmet>
+ <title>Gatsby Boopstrap Wordpress Sourced</title>
+ <meta name={'description'} content={'This is the description or our website'}/>
+ <meta name={'keywords'} content={'gatsby, gatsby, project, bootstrap'}/>
+ <meta name={'robots'} content={'index, follow'}/>
+ </Helmet>
+ **/

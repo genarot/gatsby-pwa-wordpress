@@ -2,11 +2,13 @@ import React from "react"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import { graphql } from "gatsby"
+import SEO from "../components/SEO"
 
 const BlogpostLayout = (props) => {
   const postInfo = props.data.wordpressPost;
   return (
     <div>
+      <SEO title={postInfo.title} image={postInfo.featured_media.source_url} description={postInfo.excerpt} keywords={postInfo.categories.map(cat => cat.name).join(',')}/>
       <Header activeKey={props.activeMenu || window.location.pathname}/>
       <div className="container">
         <div className="row justify-content-md-center">
