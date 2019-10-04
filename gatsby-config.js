@@ -15,6 +15,7 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
     {
@@ -26,15 +27,7 @@ module.exports = {
         baseUrl: `codingsrc.com`,
         protocol: `http`,
         hostingWPCOM: false
-      }
-    }
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `data`,
-    //     path: `${__dirname}/src/data/`,
-    //     ignore: [`**/\.*`], // ignore files starting with a dot
-    //   },
-    // },
+      },
+    },
   ],
 }
