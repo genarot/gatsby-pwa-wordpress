@@ -15,18 +15,19 @@ module.exports = {
       options: {
         name: `src`,
         path: `${__dirname}/src/`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
     {
       resolve: `gatsby-transformer-remark`
-    }
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `data`,
-    //     path: `${__dirname}/src/data/`,
-    //     ignore: [`**/\.*`], // ignore files starting with a dot
-    //   },
-    // },
+    },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `codingsrc.com`,
+        protocol: `http`,
+        hostingWPCOM: false
+      },
+    },
   ],
 }
