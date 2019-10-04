@@ -1,0 +1,28 @@
+query getWpPostInfo($slug: String!) {
+  wordpressPost(slug: {eq:$slug}) {
+    content
+    title
+    modified
+    date
+    author {
+      id
+      name
+    }
+
+    categories {
+      id
+      name
+    }
+    featured_media {
+      source_url
+    }
+  }
+}
+
+query getAllPosts {
+  allWordpressPost {
+    nodes {
+      slug
+    }
+  }
+}
